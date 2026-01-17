@@ -141,7 +141,7 @@ func (pr *ProductRepository) UpdateProduct(product model.Product) (*model.Produc
 }
 
 func (pr *ProductRepository) DeleteProduct(productId int) error {
-	sql := fmt.Sprintf("DELETE FROM products WHERE id=%d RETURNING *", productId)
+	sql := fmt.Sprintf("DELETE FROM product WHERE id=%d RETURNING *", productId)
 
 	_, err := pr.connection.Query(sql)
 	if err != nil {
