@@ -28,15 +28,15 @@ func main() {
 
 	server.GET("/ping", func(ctx *gin.Context) {
 		ctx.JSON(200, gin.H{
-			"message": "pong",
+			"message": "Everything is fine!",
 		})
 	})
 
 	server.GET("/products", ProductController.GetProducts)
 	server.POST("/products", ProductController.CreateProduct)
 	server.GET("/product/:productId", ProductController.GetProductById)
-	server.PATCH("product/:productId", ProductController.UpdateProduct)
-	server.DELETE("product/:productId", ProductController.DeleteProduct)
+	server.PATCH("/product/:productId", ProductController.UpdateProduct)
+	server.DELETE("/product/:productId", ProductController.DeleteProduct)
 
 	server.Run(":8080")
 }
