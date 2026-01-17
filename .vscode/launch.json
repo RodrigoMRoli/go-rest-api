@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "name": "GO: Launch file",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${file}"
+    },
+    {
+      "name": "GO: Launch Package",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}"
+    }
+  ]
+}
