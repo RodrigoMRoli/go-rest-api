@@ -1,7 +1,5 @@
 # Go API — Products Service
 
-...existing code...
-
 ## Overview
 
 Simple REST API for managing products (CRUD) using Gin and PostgreSQL.
